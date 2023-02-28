@@ -106,12 +106,12 @@ console.log(YillaraGoreKazananlar(fifaData, Finaller, Yillar, Kazananlar));
 	
 */
 
-function OrtalamaGolSayisi(/* kodlar buraya */) {
+function OrtalamaGolSayisi(Finaller) {
 	
-    /* kodlar buraya */
-	
+    /* kodlar buraya */const cumulative = Finaller.reduce((total, finalMatch) => total + finalMatch["Home Team Goals"] + finalMatch["Away Team Goals"],0);
+    return (cumulative/Finaller.length).toFixed(2);
 }
-
+console.log(OrtalamaGolSayisi(Finaller(fifaData)));
 
 
 /// EKSTRA ÇALIŞMALAR ///
