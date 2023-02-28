@@ -109,12 +109,13 @@ console.log(YillaraGoreKazananlar(fifaData, Finaller, Yillar, Kazananlar));
 function OrtalamaGolSayisi(Finaller) {
 	
     /* kodlar buraya */const cumulative = Finaller.reduce((total, finalMatch) => total + finalMatch["Home Team Goals"] + finalMatch["Away Team Goals"],0);
-    return (cumulative/Finaller.length).toFixed(2);
+    //console.log(cumulative); Toplam gol sayısını test için!
+	return (cumulative/Finaller.length).toFixed(2);
 }
 console.log(OrtalamaGolSayisi(Finaller(fifaData)));
 
 
-/// EKSTRA ÇALIŞMALAR ///
+/// EKSTRA ÇALIŞMALAR ///  İncelenip egzersiz için çözülecek!
 
 /*  BONUS 1:  
 	`UlkelerinKazanmaSayilari` isminde bir fonksiyon oluşturun, parametre olarak `data` ve `takım kısaltmalarını` alacak ve hangi ülkenin kaç dünya kupası olduğunu döndürecek
